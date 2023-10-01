@@ -1,2 +1,3 @@
 virt/
 venv/
+__pycache__/
