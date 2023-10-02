@@ -4,3 +4,6 @@ from django.shortcuts import render
 def fruit_list(request):
     fruits = ['Apple', 'Banana', 'Cherry', 'Date']
     return render(request, 'index.html', {'fruits': fruits})
+
+def login_form(request):
+    return render(request, 'login_form.html')
