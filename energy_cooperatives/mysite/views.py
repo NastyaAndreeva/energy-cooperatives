@@ -21,6 +21,24 @@ def signup_form(request):
         form = SignupForm()
     return render(request, 'signup_form.html', {'form': form})
 
+def baza_view(request):
+    return render(request, 'baza.html')
+
+def cooperatives_view(request):
+    return render(request, 'cooperatives.html')
+
+def courses_view(request):
+    return render(request, 'courses.html')
+
+def mentors_view(request):
+    return render(request, 'mentors.html')
+
+def news_view(request):
+    return render(request, 'news.html')
+
+def animations_view(request):
+    return render(request, 'animations.html')
+
 @csrf_exempt
 def login_form(request):
     if request.method == 'POST':

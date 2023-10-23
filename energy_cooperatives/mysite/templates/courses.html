@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Посилання</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #52b678;
+            border: 2px solid #4caf50;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .custom-btn {
+            background-color: #2e7b40;
+            /* Здесь можно указать желаемый цвет фона */
+            color: #fff;
+            /* Цвет текста на кнопке */
+            border: none;
+        }
+
+        .btn-custom {
+            background-color: #52b678;
+            /* Здесь можно указать желаемый цвет фона */
+            color: #fff;
+            /* Цвет текста на кнопке */
+            border: none;
+        }
+
+        a.form-link {
+            font-size: 24px;
+            text-decoration: none;
+            color: #ddefdd;
+        }
+
+        a.form-link:hover {
+            text-decoration: underline;
+        }
+
+        .orange-box {
+            background-color: #2e7b40;
+            padding: 20px;
+            font-size: 20px;
+            margin: 20px 0;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5 animate__animated animate__bounceInDown" id="animated-heading">Лінки для освітніх курсів</h1>
+
+        <a href="https://citizenenergy.com.ua/our-resouces/enerhetychni-kooperatyvy-korotkyy-posibnyk"
+            class="form-link btn btn-success btn-lg mt-4 animate__animated animate__zoomIn custom-btn"
+            target="_blank">Перейти на сайт</a>
+
+
+        <div class="orange-box animate__animated animate__fadeIn" id="animated-box">
+            <p>
+                В рамках проекту «Енергія громадянського суспільства 2021», започаткованого wechange eG, учасники з
+                України, Польщі та Німеччини обмінювалися знаннями про співпрацю у сфері відновлюваної енергетики та
+                разом розробляли ідеї щодо створення енергетичних кооперативів. Цей англомовний Посібник, створений в
+                рамках проекту, об’єднує дослідження та роздуми щодо відновлюваних джерел енергії (ВДЕ) та потенціалу
+                співпраці для сталого розвитку в Польщі та Україні. В Посібнику представлені можливі сценарії розвитку
+                кооперативів ВДЕ з організаційної, правової, економічної та соціальної точок зору.
+            </p>
+            <p>
+                Перший розділ Агнешки Шосток описує важливість, потенціал і проблеми відновлюваної енергетики в Польщі,
+                Україні та Німеччині. У наступному розділі Томаша Марзека розглядається енергетичний перехід і юридичні
+                виклики кооперативного руху в Польщі та демонструється, як було створено перший енергетичний кооператив
+                у Польщі.
+            </p>
+            <p>
+                Статті дослідниць Олени Рубаненко та Вікторії Вострякової аналізують останні події у секторі
+                відновлюваної енергетики в Україні, потенціал співпраці для сталого розвитку країни та пов’язані з цим
+                технологічні та економічні виклики. Майкл Шомін, Марина Садкіна та Анна Пастух досліджують
+                фінансово-правові механізми та регулювання, які можуть бути корисними для всіх, хто займається
+                створенням ВДЕ кооперативів в Україні. У заключній статті Андрій Зінченко, засновник першого
+                українського кооперативу ВДЕ у Славутичі, обговорює, як енергетичні кооперативи та місцеві партнерства
+                можуть стати рушійною силою муніципального енергетичного переходу в українських громадах.
+            </p>
+            <p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoJm056fRHMnDt47iI_zJwfizDMe-B7eOAlfKJfV6OnzF-fA/viewform"
+                    class="form-link btn btn-custom btn-lg animate__animated animate__zoomIn mt-3">Перейти до заповнення
+                    форми</a>
+            </p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Удаление классов с анимациями после их выполнения
+        document.querySelector("#animated-heading").addEventListener("animationiteration", function () {
+            this.classList.remove("animate__animated", "animate__bounceInDown");
+        });
+        document.querySelector("#animated-box").addEventListener("animationiteration", function () {
+            this.classList.remove("animate__animated", "animate__fadeIn");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('your-background-image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .card-container {
+            margin-top: 50px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px #888;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-image-overlay a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .card-image-overlay:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="static/images/11.jpg" alt="Card image cap">
+                            <div class="card-image-overlay">
+                                <a href="https://www.instagram.com/your_instagram_account/"
+                                    target="_blank">Instagram</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Вострякова Вікторія</h5>
+                            <p class="card-text">Керівник та співзасновник Агенції сталого розвитку «СИНЕРГІЯ» (ГО
+                                Вінниця, Україна),</p>
+                        </div>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Напрям діяльності
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <strong>Керівник та співзасновник Агенції сталого розвитку «СИНЕРГІЯ» (ГО Вінниця,
+                                        Україна), к.е.н. за напрямом управління та економіка, докторантка Вінницького
+                                        національного технічного університету</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Напрям управління
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <strong>За напрямом управління біоекономічною трансформацією та сертифікований
+                                        експерт-консультант управління та фінансування проєктів відновлюваної енергетики
+                                        (Інститут відновлюваної енергетики, Великобританія).</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Досвід
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <strong>Вона є членкинею Жіночого енергетичного клубу та дійсним членом MREI
+                                        Інституту відновлюваної енергетики (Європейського енергетичного центру). Має
+                                        понад 10 років наукового та викладацького досвіду в університетах та 2 роки
+                                        досвіду управління проектами.</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="static/images/7.jpg" alt="Card image cap">
+                            <div class="card-image-overlay">
+                                <a href="https://www.instagram.com/your_instagram_account/"
+                                    target="_blank">Instagram</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Олексій Кармазін</h5>
+                            <p class="card-text">Олексій Кармазін працює в Інституті відновлюваної енергетики
+                                Національної академії наук України у відділі інтегрованих енергетичних систем.</p>
+                        </div>
+                    </div>
+                    <div class="accordion" id="accordionExample1">
+                        <div class="card">
+                            <div class="card-header" id="headingOne_1">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1">
+                                        Напрям діяльності
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne_1" class="collapse" aria-labelledby="headingOne_1"
+                                data-parent="#accordionExample1">
+                                <div class="card-body">
+                                    <strong> Має понад 18 років досвіду роботи в енергетичному секторі.Основними
+                                        напрямками його діяльності є: дослідження в галузі відновлюваної
+                                        енергетики; оцінка потенціалу відновлюваної енергетики в Україні; дослідження
+                                        паралельної роботи електростанцій на відновлюваних джерелах енергії в складі
+                                        об'єднаної енергетичної системи України; розробка комбінованих систем
+                                        електропостачання на основі відновлюваних джерел енергії; проектування та
+                                        супровід будівництва на всіх етапах гібридних та мережевих сонячних
+                                        електростанцій.</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo_1">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo_1" aria-expanded="false"
+                                        aria-controls="collapseTwo_1">
+                                        Напрям управління
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo_1" class="collapse" aria-labelledby="headingTwo_1"
+                                data-parent="#accordionExample1">
+                                <div class="card-body">
+                                    <strong>Експертиза пана Кармазіна полягає в розробці техніко-економічних
+                                        обґрунтувань будівництва вітрових та сонячних електростанцій; проектуванні
+                                        промислових фотоелектричних станцій; супроводі проектів відновлюваної енергетики
+                                        на всіх стадіях; енергоаудит об'єктів соціальної та промислової сфери;
+                                        впровадження енергоефективних рішень для об'єктів соціальної та промислової
+                                        сфери.</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree_1">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree_1" aria-expanded="false"
+                                        aria-controls="collapseThree_1">
+                                        Досвід
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree_1" class="collapse" aria-labelledby="headingThree_1"
+                                data-parent="#accordionExample1">
+                                <div class="card-body">
+                                    <strong></strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="static/images/12.jpg" alt="Card image cap">
+                            <div class="card-image-overlay">
+                                <a href="https://www.instagram.com/your_instagram_account/"
+                                    target="_blank">Instagram</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Олена Рубаненко</h5>
+                            <p class="card-text">Керівниця технічного напряму та співзасновник Громадської організації
+                                Агенція сталого розвитку «СИНЕРГІЯ» у Вінниці, Україна</p>
+                        </div>
+                    </div>
+                    <div class="accordion" id="accordionExample2">
+                        <div class="card">
+                            <div class="card-header" id="headingOne_2">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne_2" aria-expanded="true" aria-controls="collapseOne_2">
+                                        Напрям діяльності
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne_2" class="collapse" aria-labelledby="headingOne_2"
+                                data-parent="#accordionExample2">
+                                <div class="card-body">
+                                    <strong>3 2011 року кандидатка технічних наук за спеціальністю Електричні станції,
+                                        мережі і системи, та з 2021 року докторка технічних наук за спеціальністю
+                                        «Перетворювання відновлюваних видів енергії», професорка кафедри електричних
+                                        станцій і систем Вінницького національного технічного університету та Провідний
+                                        науковий співробітник Інституту відновлюваної енергетики НАН України</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo_2">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo_2" aria-expanded="false"
+                                        aria-controls="collapseTwo_2">
+                                        Напрям управління
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo_2" class="collapse" aria-labelledby="headingTwo_2"
+                                data-parent="#accordionExample2">
+                                <div class="card-body">
+                                    <strong>З 2019 року працює науковою співробітницею Дослідницького Міжнародного
+                                        Центру Електротехіники Західночеського Університету (Пльзень, Чехія). З 2022
+                                        року є сертифікованою експерткою Global Women's Network for the Energy
+                                        Transition та співголовою групи «Geen Deal» Жіночого енергетичного клубу
+                                        України. З 2022 року є сертифікованою експерткою із імплементації ВДЕ (Академія
+                                        відновлюваної енергетики (RENAC) ▪ Берлін, Німеччина) та особливостей
+                                        експлуатаціх фотоелектричних систем (Інститут відновлюваної енергії,
+                                        Великобританія)</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree_2">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree_2" aria-expanded="false"
+                                        aria-controls="collapseThree_2">
+                                        Досвід
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree_2" class="collapse" aria-labelledby="headingThree_2"
+                                data-parent="#accordionExample2">
+                                <div class="card-body">
+                                    <strong></strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="static/images/13.jpg" alt="Card image cap">
+                            <div class="card-image-overlay">
+                                <a href="https://www.instagram.com/your_instagram_account/"
+                                    target="_blank">Instagram</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Сергій Кравчук</h5>
+                            <p class="card-text">Сергій Кравчук є директором компанії KNESS Energy у Вінниці.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Напрям діяльності
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <strong>Компанія є ліцензованим постачальником електроенергії промисловим споживачам
+                                        в Україні, працює на території всіх операторів системи розподілу, організатором
+                                        балансуючих груп та мікромереж, оператором комплексу акумуляторних накопичувачів
+                                        енергії. KNESS Energy входить до складу групи компаній KNESS, яка за 13 років
+                                        роботи в енергетичному секторі зарекомендувала себе як надійний бізнес-партнер
+                                        для багатьох компаній в Україні та за кордоном і реалізувала понад 1,2 ГВт
+                                        проектів відновлюваної енергетики. Сергій Кравчук готовий допомогти у
+                                        бізнес-плануванні та орієнтуванні в законодавчій базі.
+
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Напрям управління
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <strong>
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Досвід
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <strong>
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img class="card-img-top" src="static/images/14.jpg" alt="Card image cap">
+                            <div class="card-image-overlay">
+                                <a href="https://www.instagram.com/your_instagram_account/"
+                                    target="_blank">Instagram</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Христина Касьянова
+                            </h5>
+                            <p class="card-text">Пані Касьянова - експертка з 7-річним досвідом у розробці проектів з
+                                відновлюваної енергетики
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Напрям діяльності
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <strong>Bідповідальна за продажі та розвиток бізнесу
+                                        в EPC-компанії, що працює у Східній Європі та регіоні MENA; голова комітету з
+                                        енергетики
+                                        та енергетичного переходу Німецько-Української промислово-торговельної
+                                        палатиHаразі відповідає за розробку проектів з зеленого водню в Європі;
+                                        менеджерка
+                                        з питань інклюзивності та гендерної рівності в Жіночому енергетичному клубі
+                                        України.
+
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Напрям управління
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <strong>Має досвід у сфері бізнес-планів, розробки проектів ВДЕ, залучення
+                                        інвестицій та фінансування, міжнародних тендерів EPC, управління командою та
+                                        інклюзивності та різноманітності. Вона захоплюється енергетичною тематикою та
+                                        збалансованим підходом до роботи, очолює комітет з енергетики та енергетичного
+                                        переходу в AHK Ukraine та любить бути ментором у розробці енергетичних проєктів.
+
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Досвід
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <strong>Вона є членкинею Жіночого енергетичного клубу та дійсним членом MREI
+                                        Інституту
+                                        відновлюваної енергетики (Європейського енергетичного центру).
+                                        Має понад 10 років наукового та викладацького досвіду в університетах та 2 роки
+                                        досвіду
+                                        управління проектами.
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

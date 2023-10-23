@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Законодавча база</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #52b678;
+            border: 2px solid #4caf50;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .custom-btn {
+            background-color: #60b173;
+            /* Здесь можно указать желаемый цвет фона */
+            color: #fff;
+            /* Цвет текста на кнопке */
+            border: none;
+        }
+
+        .btn-custom {
+            background-color: #52b678;
+            /* Здесь можно указать желаемый цвет фона */
+            color: #fff;
+            /* Цвет текста на кнопке */
+            border: none;
+        }
+
+        a.form-link {
+            font-size: 24px;
+            text-decoration: none;
+            color: #fff
+                /* Изменить цвет ссылки на белый и сделать стиль приоритетным */
+        }
+
+
+
+        .orange-box {
+            background-color: #2e7b40;
+            padding: 20px;
+            font-size: 20px;
+            margin: 20px 0;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5 animate__animated animate__bounceInDown" id="animated-heading">Законодавча база</h1>
+
+
+        <div class="orange-box animate__animated animate__fadeIn" id="animated-box">
+            <a style="color: #ffffff"
+                href="https://citizenenergy.com.ua/our-resouces/enerhetychni-kooperatyvy-korotkyy-posibnyk"
+                class="form-link btn btn-success btn-lg mt-4 animate__animated animate__zoomIn custom-btn"
+                target="_blank">Перейти до нормативно-правової бази</a>
+            <ul>
+                <li>
+                    <a style="color: #ffffff" href="https://zakon.rada.gov.ua/laws/show/1391-14#Text"
+                        target="_blank">Закон
+                        України «Про альтернативні види
+                        палива»;</a>
+                </li>
+                <li>
+                    <a style="color: #ffffff" href="https://zakon.rada.gov.ua/laws/show/555-15" target="_blank">Закон
+                        України «Про
+                        альтернативні джерела енергії»;</a>
+                </li>
+
+                <li>
+                    <a style="color: #ffffff" href="https://zakon.rada.gov.ua/laws/show/2019-19#Text"
+                        target="_blank">Закон України «Про ринок
+                        електричної енергії»</a>
+                </li>
+                <li><a style="color: #ffffff" href="https://zakon.rada.gov.ua/laws/show/2509-15#Text"
+                        target="_blank">Закон України «Про комбіноване виробництво теплової та електричної
+                        енергії (когенерацію) та
+                        використання скидного енергопотенціалу»;</a></li>
+                <li><a style="color: #ffffff" href="https://zakon.rada.gov.ua/laws/show/1391-17#Text"
+                        target="_blank">Закон України «Про внесення змін до деяких законів України щодо сприяння
+                        виробництву та використанню
+                        біологічних видів палива»;</a></li>
+                <li><a style="color: #ffffff" href="https://zakon.rada.gov.ua/laws/show/1392-17" target="_blank">Закон
+                        України «Про газ (метан) вугільних родовищ».</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Удаление классов с анимациями после их выполнения
+        document.querySelector("#animated-heading").addEventListener("animationiteration", function () {
+            this.classList.remove("animate__animated", "animate__bounceInDown");
+        });
+        document.querySelector("#animated-box").addEventListener("animationiteration", function () {
+            this.classList.remove("animate__animated", "animate__fadeIn");
+        });
+    </script>
+</body>
+
+</html>
