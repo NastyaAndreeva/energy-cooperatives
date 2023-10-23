@@ -29,6 +29,7 @@
       }
 
       .navbar {
+        overflow: hidden;
         background-color: rgb(21, 145, 72);
         height: 60px;
       }
@@ -201,16 +202,8 @@
 
   <body style="background-color: rgba(255, 255, 255, 0.323)">
     <div class="navbar">
-      <img
-        src="../static/images/logo-color.jpg"
-        alt="Лого"
-        class="logo"
-        width="20"
-        height="20"
-      />
       <a href="#home" class="larger-text">Енергетичні кооперативи</a>
       <a href="#news" class="news" style="font-size: 19px">Новини</a>
-      <a href="#home" class="larger-text">Зареєструватись/Вхід</a>
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn" style="font-size: 19px">
           Інформація
@@ -221,95 +214,15 @@
           <a href="#">Link 3</a>
         </div>
       </div>
+      <input
+        type="text"
+        class="register-login-input"
+        style="margin-top: 5px"
+        placeholder="Зареєструватись"
+      />
+      <input type="text" class="register-login-input" placeholder="Вхід" />
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div
-          id="carousel-example-generic"
-          class="carousel slide carousel-fade carousel-animate carousel-bg"
-          data-ride="carousel"
-        >
-          <ol class="carousel-indicators">
-            <li
-              data-target="#carousel-example-generic"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner" role="listbox">
-            <div
-              class="item active"
-              style="
-                background-image: url(https://images.pexels.com/photos/13836756/pexels-photo-13836756.jpeg);
-              "
-            >
-              <div class="carousel-caption">
-                <div class="hero fadeInUp animated">
-                  <hgroup>
-                    <h1>Енергетичні кооперативи</h1>
-                  </hgroup>
-                </div>
-              </div>
-            </div>
-            <div
-              class="item"
-              style="
-                background-image: url(https://images.pexels.com/photos/7555343/pexels-photo-7555343.jpeg);
-              "
-            >
-              <div class="carousel-caption">
-                <div class="hero fadeInUp animated">
-                  <hgroup>
-                    <h1>Енергетичні кооперативи</h1>
-                  </hgroup>
-                </div>
-              </div>
-            </div>
-            <div
-              class="item"
-              style="
-                background-image: url(https://images.pexels.com/photos/5683351/pexels-photo-5683351.jpeg);
-              "
-            >
-              <div class="carousel-caption">
-                <div class="hero fadeInUp animated">
-                  <hgroup>
-                    <h1>Енергетичні кооперативи</h1>
-                  </hgroup>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a
-            class="left carousel-control"
-            href="#carousel-example-generic"
-            role="button"
-            data-slide="prev"
-          >
-            <span
-              class="glyphicon glyphicon-chevron-left"
-              aria-hidden="true"
-            ></span>
-            <span class="sr-only">Назад</span>
-          </a>
-          <a
-            class="right carousel-control"
-            href="#carousel-example-generic"
-            role="button"
-            data-slide="next"
-          >
-            <span
-              class="glyphicon glyphicon-chevron-right"
-              aria-hidden="true"
-            ></span>
-            <span class="sr-only">Вперед</span>
-          </a>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <div class="row">
         <div
