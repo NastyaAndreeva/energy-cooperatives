@@ -263,17 +263,51 @@
                 font-size: 2em;
             }
         }
+      }
+
+      .carousel-fade .carousel-inner .item {
+        transition-property: opacity;
+      }
+
+      .carousel-fade .carousel-inner .item,
+      .carousel-fade .carousel-inner .active.left,
+      .carousel-fade .carousel-inner .active.right {
+        opacity: 0;
+      }
+
+      .carousel-fade .carousel-inner .active,
+      .carousel-fade .carousel-inner .next.left,
+      .carousel-fade .carousel-inner .prev.right {
+        opacity: 1;
+      }
+
+      .carousel-fade .carousel-inner .next,
+      .carousel-fade .carousel-inner .prev,
+      .carousel-fade .carousel-inner .active.left,
+      .carousel-fade .carousel-inner .active.right {
+        left: 0;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .carousel-bg .carousel-inner .item {
+        background-color: darkslategrey;
+        background-size: cover;
+        background-position: center;
+        min-height: 480px;
+        padding: 50px 0;
+      }
     </style>
     <script>
-        function myFunction() {
-            var dropdown = document.getElementById("myDropdown");
-            if (dropdown.style.display === "block") {
-                dropdown.style.display = "none";
-            } else {
-                dropdown.style.display = "block";
-            }
+      function myFunction() {
+        var dropdown = document.getElementById("myDropdown");
+        if (dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+        } else {
+          dropdown.style.display = "block";
         }
+      }
     </script>
+
 </head>
 
 <body style="background-color: rgba(255, 255, 255, 0.323);">
@@ -340,17 +374,65 @@
                             </div>
                         </div>
                     </div>
+     
                 </div>
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Назад</span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Вперед</span>
-                </a>
+              </div>
             </div>
+            <div
+              class="item"
+              style="
+                background-image: url(https://images.pexels.com/photos/7555343/pexels-photo-7555343.jpeg);
+              "
+            >
+              <div class="carousel-caption">
+                <div class="hero fadeInUp animated">
+                  <hgroup>
+                    <h1>Енергетичні кооперативи</h1>
+                  </hgroup>
+                </div>
+              </div>
+            </div>
+            <div
+              class="item"
+              style="
+                background-image: url(https://images.pexels.com/photos/5683351/pexels-photo-5683351.jpeg);
+              "
+            >
+              <div class="carousel-caption">
+                <div class="hero fadeInUp animated">
+                  <hgroup>
+                    <h1>Енергетичні кооперативи</h1>
+                  </hgroup>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="left carousel-control"
+            href="#carousel-example-generic"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              class="glyphicon glyphicon-chevron-left"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Назад</span>
+          </a>
+          <a
+            class="right carousel-control"
+            href="#carousel-example-generic"
+            role="button"
+            data-slide="next"
+          >
+            <span
+              class="glyphicon glyphicon-chevron-right"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Вперед</span>
+          </a>
         </div>
+      </div>
     </div>
     <div class="circle-section">
         <h2 class="circle-title">Напрямки роботи</h2>
@@ -430,6 +512,7 @@
                 </div>
             </div>
         </div>
+      </div>
     </footer>
 </body>
 
