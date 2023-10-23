@@ -1,16 +1,412 @@
-<!-- example -->
-
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fruit List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://bootstraptema.ru/plugins/2016/animate/animate.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        z-index: 0;
+      }
+
+      .larger-text {
+        font-size: 19px;
+      }
+
+      .navbar {
+        background-color: rgb(21, 145, 72);
+        height: 60px;
+      }
+
+      .navbar a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin-bottom: 15px;
+        transition: background-color 0.3s;
+      }
+
+      .navbar a.news {
+        margin-right: 400px;
+      }
+
+      .navbar a:hover {
+        background-color: #15834a;
+      }
+
+      .dropbtn {
+        background-color: #16a560;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: #15834a;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #109754;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        background-color: rgba(16, 151, 84, 0.9);
+      }
+
+      .dropdown-content a:hover {
+        background-color: #179357;
+      }
+
+      .show {
+        display: block;
+      }
+
+      .register-login {
+        float: right;
+        margin-right: 20px;
+      }
+
+      .register-login-input {
+        font-size: 16px;
+        padding: 12px 16px;
+        border: none;
+        margin-right: 10px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 20px auto 0;
+        border: 1px solid #696868;
+        border-radius: 5px;
+        padding: 0;
+      }
+
+      .carousel-animate .carousel-indicators > li {
+        margin: 0 2px;
+        background-color: #fff;
+        border-color: rgb(58, 36, 83);
+        opacity: 0.7;
+      }
+
+      .carousel-animate .carousel-indicators > li.active {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+      }
+
+      .carousel-animate .hero {
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
+      }
+
+      .btn.btn-lg {
+        padding: 10px 40px;
+      }
+
+      .btn.btn-hero,
+      .btn.btn-hero:hover,
+      .btn.btn-hero:focus {
+        color: #fff;
+        background-color: #694198;
+        border-color: rgb(67, 41, 97);
+        outline: none;
+        margin: 20px auto;
+      }
+
+      @media screen and (max-width: 640px) {
+        .hero h1 {
+          font-size: 2em;
+        }
+      }
+
+      .carousel-fade .carousel-inner .item {
+        transition-property: opacity;
+      }
+
+      .carousel-fade .carousel-inner .item,
+      .carousel-fade .carousel-inner .active.left,
+      .carousel-fade .carousel-inner .active.right {
+        opacity: 0;
+      }
+
+      .carousel-fade .carousel-inner .active,
+      .carousel-fade .carousel-inner .next.left,
+      .carousel-fade .carousel-inner .prev.right {
+        opacity: 1;
+      }
+
+      .carousel-fade .carousel-inner .next,
+      .carousel-fade .carousel-inner .prev,
+      .carousel-fade .carousel-inner .active.left,
+      .carousel-fade .carousel-inner .active.right {
+        left: 0;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .carousel-bg .carousel-inner .item {
+        background-color: darkslategrey;
+        background-size: cover;
+        background-position: center;
+        min-height: 480px;
+        padding: 50px 0;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        var dropdown = document.getElementById("myDropdown");
+        if (dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+        } else {
+          dropdown.style.display = "block";
+        }
+      }
+    </script>
   </head>
-  <body>
-    <h1>List of Fruits:</h1>
-    <ul>
-      {% for fruit in fruits %}
-      <li>{{ fruit }}</li>
-      {% endfor %}
-    </ul>
+
+  <body style="background-color: rgba(255, 255, 255, 0.323)">
+    <div class="navbar">
+      <img
+        src="../static/images/logo-color.jpg"
+        alt="Лого"
+        class="logo"
+        width="20"
+        height="20"
+      />
+      <a href="#home" class="larger-text">Енергетичні кооперативи</a>
+      <a href="#news" class="news" style="font-size: 19px">Новини</a>
+      <a href="#home" class="larger-text">Зареєструватись/Вхід</a>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn" style="font-size: 19px">
+          Інформація
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div
+          id="carousel-example-generic"
+          class="carousel slide carousel-fade carousel-animate carousel-bg"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carousel-example-generic"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div
+              class="item active"
+              style="
+                background-image: url(https://images.pexels.com/photos/13836756/pexels-photo-13836756.jpeg);
+              "
+            >
+              <div class="carousel-caption">
+                <div class="hero fadeInUp animated">
+                  <hgroup>
+                    <h1>Енергетичні кооперативи</h1>
+                  </hgroup>
+                </div>
+              </div>
+            </div>
+            <div
+              class="item"
+              style="
+                background-image: url(https://images.pexels.com/photos/7555343/pexels-photo-7555343.jpeg);
+              "
+            >
+              <div class="carousel-caption">
+                <div class="hero fadeInUp animated">
+                  <hgroup>
+                    <h1>Енергетичні кооперативи</h1>
+                  </hgroup>
+                </div>
+              </div>
+            </div>
+            <div
+              class="item"
+              style="
+                background-image: url(https://images.pexels.com/photos/5683351/pexels-photo-5683351.jpeg);
+              "
+            >
+              <div class="carousel-caption">
+                <div class="hero fadeInUp animated">
+                  <hgroup>
+                    <h1>Енергетичні кооперативи</h1>
+                  </hgroup>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="left carousel-control"
+            href="#carousel-example-generic"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              class="glyphicon glyphicon-chevron-left"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Назад</span>
+          </a>
+          <a
+            class="right carousel-control"
+            href="#carousel-example-generic"
+            role="button"
+            data-slide="next"
+          >
+            <span
+              class="glyphicon glyphicon-chevron-right"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Вперед</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div
+          id="carousel-example-generic"
+          class="carousel slide carousel-fade carousel-animate carousel-bg"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carousel-example-generic"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div
+              class="item active"
+              style="
+                background-image: url(https://images.pexels.com/photos/13836756/pexels-photo-13836756.jpeg);
+              "
+            >
+              <div class="carousel-caption">
+                <div class="hero fadeInUp animated">
+                  <hgroup>
+                    <h1>Енергетичні кооперативи</h1>
+                  </hgroup>
+                </div>
+              </div>
+            </div>
+            <div
+              class="item"
+              style="
+                background-image: url(https://images.pexels.com/photos/7555343/pexels-photo-7555343.jpeg);
+              "
+            >
+              <div class="carousel-caption">
+                <div class="hero fadeInUp animated">
+                  <hgroup>
+                    <h1>Енергетичні кооперативи</h1>
+                  </hgroup>
+                </div>
+              </div>
+            </div>
+            <div
+              class="item"
+              style="
+                background-image: url(https://images.pexels.com/photos/5683351/pexels-photo-5683351.jpeg);
+              "
+            >
+              <div class="carousel-caption">
+                <div class="hero fadeInUp animated">
+                  <hgroup>
+                    <h1>Енергетичні кооперативи</h1>
+                  </hgroup>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="left carousel-control"
+            href="#carousel-example-generic"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              class="glyphicon glyphicon-chevron-left"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Назад</span>
+          </a>
+          <a
+            class="right carousel-control"
+            href="#carousel-example-generic"
+            role="button"
+            data-slide="next"
+          >
+            <span
+              class="glyphicon glyphicon-chevron-right"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Вперед</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>&copy; "linkedin.com"</p>
+            <p>&copy; "linkedin.com"</p>
+            <p>&copy; "linkedin.com"</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
