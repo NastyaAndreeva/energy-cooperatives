@@ -1,215 +1,332 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Про</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <style>
-        a {
-            text-decoration: none;
+      .larger-text {
+        font-size: 19px;
+      }
+
+      .navbar {
+        background-color: rgb(84, 150, 88);
+        padding: 10px;
+      }
+
+      .navbar a {
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin-bottom: 1px;
+        transition: background-color 0.3s;
+      }
+
+      .navbar a.news {
+        margin-right: 400px;
+      }
+
+      .navbar a:hover {
+        background-color: #529a56;
+      }
+
+      .dropbtn {
+        background-color: #396e3c;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: #15834a;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #109754;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        background-color: rgba(244, 252, 248, 0.9);
+        transition: background-color 0.3s;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ffffff;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #d8f0dd;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 36px;
+        color: #2e7530;
+        margin-top: 20px;
+        animation: fall 10s linear infinite, spin 3s linear infinite;
+      }
+
+      h2 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 24px;
+        color: #4caf50;
+      }
+
+      .animated-div {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: #52b678;
+        color: #ffffff;
+        border: 2px solid #4caf50;
+        border-radius: 5px;
+      }
+
+      .custom-text {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: left;
+        color: #000;
+        box-shadow: 3px 3px 6px #ccc;
+      }
+
+      p {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      .section-divider {
+        height: 1px;
+        background-color: #ccc;
+        margin: 20px 0;
+      }
+
+      .falling-leaf {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: url("atic/images/leave.png");
+        /* Замените URL на изображение листа */
+        background-size: cover;
+        animation: falling 5s linear infinite;
+      }
+
+      @keyframes falling {
+        0% {
+          transform: translateY(-5%) rotate(0deg);
+          opacity: 0.7;
         }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #d8f0dd;
-            text-align: center;
-            padding: 20px;
+        25% {
+          transform: translateY(20%) rotate(45deg);
+          opacity: 0.9;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+        50% {
+          transform: translateY(40%) rotate(90deg);
+          opacity: 0.6;
         }
 
-        h1 {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 36px;
-            color: #2e7530;
-            margin-top: 20px;
-            animation: fall 10s linear infinite, spin 3s linear infinite;
+        75% {
+          transform: translateY(60%) rotate(45deg);
+          opacity: 0.8;
         }
 
-        h2 {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 24px;
-            color: #4caf50;
+        100% {
+          transform: translateY(100%) rotate(0deg);
+          opacity: 0.7;
+        }
+      }
+
+      @keyframes highlight {
+        0% {
+          border-color: #4caf50;
+          /* Цвет рамки по умолчанию */
         }
 
-        .animated-div {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #52b678;
-            color: #ffffff;
-            border: 2px solid #4caf50;
-            border-radius: 5px;
+        50% {
+          border-color: #ff5733;
+          /* Цвет рамки при подсветке (измените на нужный) */
         }
 
-        .custom-text {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 5px;
-            font-size: 18px;
-            line-height: 1.6;
-            text-align: left;
-            color: #000;
-            box-shadow: 3px 3px 6px #ccc;
+        100% {
+          border-color: #4caf50;
+          /* Возврат к цвету рамки по умолчанию */
         }
-
-        p {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 20px;
-            margin: 10px 0;
-        }
-
-        .section-divider {
-            height: 1px;
-            background-color: #ccc;
-            margin: 20px 0;
-        }
-
-        .falling-leaf {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: url('atic/images/leave.png');
-            /* Замените URL на изображение листа */
-            background-size: cover;
-            animation: falling 5s linear infinite;
-        }
-
-        @keyframes falling {
-            0% {
-                transform: translateY(-5%) rotate(0deg);
-                opacity: 0.7;
-            }
-
-            25% {
-                transform: translateY(20%) rotate(45deg);
-                opacity: 0.9;
-            }
-
-            50% {
-                transform: translateY(40%) rotate(90deg);
-                opacity: 0.6;
-            }
-
-            75% {
-                transform: translateY(60%) rotate(45deg);
-                opacity: 0.8;
-            }
-
-            100% {
-                transform: translateY(100%) rotate(0deg);
-                opacity: 0.7;
-            }
-        }
-
-        @keyframes highlight {
-            0% {
-                border-color: #4caf50;
-                /* Цвет рамки по умолчанию */
-            }
-
-            50% {
-                border-color: #FF5733;
-                /* Цвет рамки при подсветке (измените на нужный) */
-            }
-
-            100% {
-                border-color: #4caf50;
-                /* Возврат к цвету рамки по умолчанию */
-            }
-        }
+      }
     </style>
-</head>
+    <script>
+      function myFunction() {
+        var dropdown = document.getElementById("myDropdown");
+        if (dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+        } else {
+          dropdown.style.display = "block";
+        }
+      }
+    </script>
+  </head>
 
-<body>
+  <body>
+    <div class="navbar">
+      <a href="/"
+        ><img
+          src="../static/images/logo_color.jpg"
+          alt="Лого"
+          class="logo"
+          width="70"
+          height="70"
+      /></a>
+      <a href="animations" class="larger-text">Енергетичні кооперативи</a>
+      <a href="news" class="news" style="font-size: 19px">Новини</a>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn" style="font-size: 19px">
+          Інформація
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="baza">Законодавча база</a>
+          <a href="cooperatives">Створені кооперативи</a>
+          <a href="mentors">Ментори проєкту</a>
+          <a href="courses">Курси для навчання</a>
+        </div>
+      </div>
+      <a href="login" class="larger-text">Логін</a>
+      <a href="signup" class="larger-text">Реєстрація</a>
+    </div>
     <div class="container">
-        <h1 class="animate__animated">Енергетичні кооперативи</h1>
+      <h1 class="animate__animated">Енергетичні кооперативи</h1>
 
-        <div class="animated-div animate__animated animate__fadeInLeft">
-            <h2>
-                <a style="color: #ffffff" href="#section1">Сила громади: Як Енергетичні Кооперативи Революціонізують
-                    Виробництво Енергії?</a>
-            </h2>
-            <div class="custom-text">
-                Енергетичні кооперативи – це інноваційний шлях до створення ефективних та сталої енергетики. Вони
-                об'єднують громади з метою створення власних джерел енергії, спираючись на відновлювані джерела, такі як
-                сонце, вітер та біомаса. У цій статті ми розглянемо, як енергетичні кооперативи трансформують
-                енергетичний ландшафт, зменшуючи залежність від великих корпорацій та сприяючи сталому розвитку громад.
-            </div>
+      <div class="animated-div animate__animated animate__fadeInLeft">
+        <h2>
+          <a style="color: #ffffff" href="#section1"
+            >Сила громади: Як Енергетичні Кооперативи Революціонізують
+            Виробництво Енергії?</a
+          >
+        </h2>
+        <div class="custom-text">
+          Енергетичні кооперативи – це інноваційний шлях до створення ефективних
+          та сталої енергетики. Вони об'єднують громади з метою створення
+          власних джерел енергії, спираючись на відновлювані джерела, такі як
+          сонце, вітер та біомаса. У цій статті ми розглянемо, як енергетичні
+          кооперативи трансформують енергетичний ландшафт, зменшуючи залежність
+          від великих корпорацій та сприяючи сталому розвитку громад.
         </div>
+      </div>
 
-        <div class="section-divider"></div>
+      <div class="section-divider"></div>
 
-        <div class="animated-div animate__animated animate__fadeInRight">
-            <h2>
-                <a style="color: #ffffff" href="#section2">Зелена Енергія для Всіх: Роль Енергетичних Кооперативів у
-                    Спільнотах</a>
-            </h2>
-            <div class="custom-text">
-                У світі, де збереження природних ресурсів та скорочення викидів CO2 стали загальною метою, енергетичні
-                кооперативи грають ключову роль у забезпеченні доступу до зеленої енергії для всіх. Ці кооперативи
-                створюють сприятливі умови для участі громадян у виробництві та споживанні екологічної енергії, що
-                сприяє не лише заощадженню грошей, але й збереженню природи.
-            </div>
+      <div class="animated-div animate__animated animate__fadeInRight">
+        <h2>
+          <a style="color: #ffffff" href="#section2"
+            >Зелена Енергія для Всіх: Роль Енергетичних Кооперативів у
+            Спільнотах</a
+          >
+        </h2>
+        <div class="custom-text">
+          У світі, де збереження природних ресурсів та скорочення викидів CO2
+          стали загальною метою, енергетичні кооперативи грають ключову роль у
+          забезпеченні доступу до зеленої енергії для всіх. Ці кооперативи
+          створюють сприятливі умови для участі громадян у виробництві та
+          споживанні екологічної енергії, що сприяє не лише заощадженню грошей,
+          але й збереженню природи.
         </div>
+      </div>
 
-        <div class="section-divider"></div>
+      <div class="section-divider"></div>
 
-        <div class="animated-div animate__animated animate__zoomIn">
-            <h2>
-                <a style="color: #ffffff" href="#section3">Від Споживачів до Виробників: Як Енергетичні Кооперативи
-                    Змінюють Гру Правил</a>
-            </h2>
-            <div class="custom-text">
-                Енергетичні кооперативи перетворюють звичайних споживачів електроенергії на активних виробників зеленої
-                енергії. Вони надають громадянам можливість встановлювати власні сонячні панелі, вітряні турбіни та
-                багато інших відновлюваних джерел, забезпечуючи не лише свої потреби, але й виручаючи з прибутків від
-                продажу надлишку енергії.
-            </div>
+      <div class="animated-div animate__animated animate__zoomIn">
+        <h2>
+          <a style="color: #ffffff" href="#section3"
+            >Від Споживачів до Виробників: Як Енергетичні Кооперативи Змінюють
+            Гру Правил</a
+          >
+        </h2>
+        <div class="custom-text">
+          Енергетичні кооперативи перетворюють звичайних споживачів
+          електроенергії на активних виробників зеленої енергії. Вони надають
+          громадянам можливість встановлювати власні сонячні панелі, вітряні
+          турбіни та багато інших відновлюваних джерел, забезпечуючи не лише
+          свої потреби, але й виручаючи з прибутків від продажу надлишку
+          енергії.
         </div>
+      </div>
 
-        <div class="section-divider"></div>
+      <div class="section-divider"></div>
 
-        <div class="animated-div animate__animated animate__rotateIn">
-            <h2>
-                <a style="color: #ffffff" href="#section4">Енергія на Згоду: Переваги та Майбутнє Енергетичних
-                    Кооперативів</a>
-            </h2>
-            <div class="custom-text">
-                Енергетичні кооперативи – це спільна робота, що покликана змінити енергетичну індустрію до кращого. Ці
-                спільноти створюють не лише зелену енергію, але й забезпечують стабільні доходи громад та прискорюють
-                процес переходу до сталої енергетики. Давайте розглянемо переваги енергетичних кооперативів та їхнє
-                місце в майбутньому енергетики.
-            </div>
+      <div class="animated-div animate__animated animate__rotateIn">
+        <h2>
+          <a style="color: #ffffff" href="#section4"
+            >Енергія на Згоду: Переваги та Майбутнє Енергетичних Кооперативів</a
+          >
+        </h2>
+        <div class="custom-text">
+          Енергетичні кооперативи – це спільна робота, що покликана змінити
+          енергетичну індустрію до кращого. Ці спільноти створюють не лише
+          зелену енергію, але й забезпечують стабільні доходи громад та
+          прискорюють процес переходу до сталої енергетики. Давайте розглянемо
+          переваги енергетичних кооперативів та їхнє місце в майбутньому
+          енергетики.
         </div>
-
+      </div>
     </div>
 
     <div class="falling-leaves">
-        <!-- Leaves will be added here -->
+      <!-- Leaves will be added here -->
     </div>
 
     <script>
-        function createLeaves() {
-            const numberOfLeaves = 30;
-            const container = document.querySelector('.falling-leaves');
+      function createLeaves() {
+        const numberOfLeaves = 30;
+        const container = document.querySelector(".falling-leaves");
 
-            for (let i = 0; i < numberOfLeaves; i++) {
-                const leaf = document.createElement('div');
-                leaf.className = 'falling-leaf';
-                leaf.style.left = `${Math.random() * 100}vw`;
-                leaf.style.animationDuration = `${Math.random() * 2 + 3}s`;
-                container.appendChild(leaf);
-            }
+        for (let i = 0; i < numberOfLeaves; i++) {
+          const leaf = document.createElement("div");
+          leaf.className = "falling-leaf";
+          leaf.style.left = `${Math.random() * 100}vw`;
+          leaf.style.animationDuration = `${Math.random() * 2 + 3}s`;
+          container.appendChild(leaf);
         }
+      }
 
-        createLeaves();
+      createLeaves();
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
-</body>
-
+  </body>
 </html>

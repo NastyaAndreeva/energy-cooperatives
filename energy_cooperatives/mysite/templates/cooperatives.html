@@ -1,131 +1,241 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Про «Сонячне Місто»</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f1f1f1;
-            margin: 0;
-            padding: 0;
-        }
+      .larger-text {
+        font-size: 19px;
+      }
 
-        .container {
-            background-color: #f9f9f9;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 2px solid #FFA500;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        }
+      .navbar {
+        background-color: rgb(84, 150, 88);
+        padding: 10px;
+      }
 
-        h1 {
-            text-align: center;
-            color: #FF5733;
-            font-size: 36px;
-            margin: 20px 0;
-        }
+      .navbar a {
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        margin-bottom: 1px;
+        transition: background-color 0.3s;
+      }
 
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            font-size: 20px;
-        }
+      .navbar a.news {
+        margin-right: 400px;
+      }
 
-        .centered {
-            text-align: center;
-            color: #FF5733;
-            font-size: 24px;
-            margin: 20px 0;
-        }
+      .navbar a:hover {
+        background-color: #529a56;
+      }
 
-        .orange-box {
-            border: 2px solid #FF5733;
-            padding: 20px;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            width: 80%;
-            margin: 0 auto;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 5px 5px 15px #FF5733;
-        }
+      .dropbtn {
+        background-color: #396e3c;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
 
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            border: 6px solid #FFD700;
-            border-radius: 15px;
-            box-shadow: 5px 5px 15px #888888;
-        }
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: #15834a;
+      }
 
-        p {
-            font-size: 20px;
-            color: #333;
-            margin: 20px 0;
-            line-height: 1.5;
-        }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #109754;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        background-color: rgba(244, 252, 248, 0.9);
+        transition: background-color 0.3s;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ffffff;
+      }
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f1f1f1;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        background-color: #f9f9f9;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #ffa500;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        text-align: center;
+        color: #ff5733;
+        font-size: 36px;
+        margin: 20px 0;
+      }
+
+      ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        font-size: 20px;
+      }
+
+      .centered {
+        text-align: center;
+        color: #ff5733;
+        font-size: 24px;
+        margin: 20px 0;
+      }
+
+      .orange-box {
+        border: 2px solid #ff5733;
+        padding: 20px;
+        background: linear-gradient(135deg, #ffd700, #ffa500);
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 5px 5px 15px #ff5733;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border: 6px solid #ffd700;
+        border-radius: 15px;
+        box-shadow: 5px 5px 15px #888888;
+      }
+
+      p {
+        font-size: 20px;
+        color: #333;
+        margin: 20px 0;
+        line-height: 1.5;
+      }
     </style>
-</head>
+    <script>
+      function myFunction() {
+        var dropdown = document.getElementById("myDropdown");
+        if (dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+        } else {
+          dropdown.style.display = "block";
+        }
+      }
+    </script>
+  </head>
 
-<body>
-    <div class="container">
-        <h1>Про «Сонячне Місто»</h1>
-        <ul>
-            <li>Як це працює</li>
-            <li>Кооперативний Спільнокошт</li>
-        </ul>
-        <h2 class="centered">Як це працює</h2>
-        <div class="orange-box">
-            Ми встановимо сонячні електростанції на дахах муніципальних будівель і продаватимемо електроенергію за
-            «зеленим тарифом». Це дозволить повернути початкові інвестиції членам кооперативу та отримати чистий
-            прибуток
-            за кілька років.
+  <body>
+    <div class="navbar">
+      <a href="/"
+        ><img
+          src="../static/images/logo_color.jpg"
+          alt="Лого"
+          class="logo"
+          width="70"
+          height="70"
+      /></a>
+      <a href="animations" class="larger-text">Енергетичні кооперативи</a>
+      <a href="news" class="news" style="font-size: 19px">Новини</a>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn" style="font-size: 19px">
+          Інформація
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="baza">Законодавча база</a>
+          <a href="cooperatives">Створені кооперативи</a>
+          <a href="mentors">Ментори проєкту</a>
+          <a href="courses">Курси для навчання</a>
         </div>
-        <p>
-            Ми реалізуємо принцип закладений одним із піонерів кооперативного руху Вільгельмом Фрідріхом Раффайзеном –
-            «Неможливе для одного стає можливим для багатьох».
-        </p>
-        <p>
-            Енергетика вимагає значних капіталовкладень, проте об’єднання невеликих інвестицій від звичайних громадян
-            дозволяє разом запускати проекти у цій галузі.
-        </p>
-        <p>
-            Члени кооперативу разом складають свої інвестиції та стають колективним інвестором, який встановить сонячні
-            електростанції на дахах муніципальних будівель – БК «Енергетик», БПО «Люкс», «Мінськ». Це дозволить
-            генерувати
-            чисту електроенергію й прибуток для членів кооперативу та міської громади.
-        </p>
-        <img src="static/images/5.jpg"
-            alt="Моделювання розміщення сонячної електростанції на одній з будівель в Славутичі" width="1000">
-        <p>
-            Крім того, кооператив муніципальний, бо створений за сприяння міста та створює нові можливості для громади:
-            частина чистого прибутку йтиме на міські проекти. Одним із учасників «Сонячного Міста» є КП «Агенція
-            Регіонального Розвитку».
-        </p>
-        <h2 class="centered">Кооперативний Спільнокошт</h2>
-        <p>
-            Щоб зібрати значні кошти, потрібні для створення сонячної електростанції, ми залучатимемо членів кооперативу
-            за моделлю кооперативного спільнокошту – усі охочі зможуть придбати паї у кооперативі. На ці кошти ми і
-            побудуємо сонячну електростанцію на дахах, орендованих кооперативом у Славутича.
-        </p>
-        <p>
-            Така практика не нова – за останні роки у розвинених країнах вона набула широкого поширення під назвою
-            equity
-            crowdfunding. Ми лише пристосовуємо цей механізм до наших умов та особливостей регулювання української
-            енергетики.
-        </p>
-        <p>
-            Краудфандингова кампанія триватиме з 15 серпня по 2019 року. При цьому перші 2 тижні виключне право
-            інвестувати
-            в «Сонячне Місто» матимуть мешканці Славутича, адже ми хочемо залучити у невеликі генеруючі потужності перш
-            за все людей, що живуть поряд з місцем, де вони розташовані. 29 серпня до процесу можуть приєднатися усі
-            охочі з будь-якого регіону України.
-        </p>
+      </div>
+      <a href="login" class="larger-text">Логін</a>
+      <a href="signup" class="larger-text">Реєстрація</a>
     </div>
-</body>
-
+    <div class="container">
+      <h1>Про «Сонячне Місто»</h1>
+      <ul>
+        <li>Як це працює</li>
+        <li>Кооперативний Спільнокошт</li>
+      </ul>
+      <h2 class="centered">Як це працює</h2>
+      <div class="orange-box">
+        Ми встановимо сонячні електростанції на дахах муніципальних будівель і
+        продаватимемо електроенергію за «зеленим тарифом». Це дозволить
+        повернути початкові інвестиції членам кооперативу та отримати чистий
+        прибуток за кілька років.
+      </div>
+      <p>
+        Ми реалізуємо принцип закладений одним із піонерів кооперативного руху
+        Вільгельмом Фрідріхом Раффайзеном – «Неможливе для одного стає можливим
+        для багатьох».
+      </p>
+      <p>
+        Енергетика вимагає значних капіталовкладень, проте об’єднання невеликих
+        інвестицій від звичайних громадян дозволяє разом запускати проекти у цій
+        галузі.
+      </p>
+      <p>
+        Члени кооперативу разом складають свої інвестиції та стають колективним
+        інвестором, який встановить сонячні електростанції на дахах
+        муніципальних будівель – БК «Енергетик», БПО «Люкс», «Мінськ». Це
+        дозволить генерувати чисту електроенергію й прибуток для членів
+        кооперативу та міської громади.
+      </p>
+      <img
+        src="static/images/5.jpg"
+        alt="Моделювання розміщення сонячної електростанції на одній з будівель в Славутичі"
+        width="1000"
+      />
+      <p>
+        Крім того, кооператив муніципальний, бо створений за сприяння міста та
+        створює нові можливості для громади: частина чистого прибутку йтиме на
+        міські проекти. Одним із учасників «Сонячного Міста» є КП «Агенція
+        Регіонального Розвитку».
+      </p>
+      <h2 class="centered">Кооперативний Спільнокошт</h2>
+      <p>
+        Щоб зібрати значні кошти, потрібні для створення сонячної
+        електростанції, ми залучатимемо членів кооперативу за моделлю
+        кооперативного спільнокошту – усі охочі зможуть придбати паї у
+        кооперативі. На ці кошти ми і побудуємо сонячну електростанцію на дахах,
+        орендованих кооперативом у Славутича.
+      </p>
+      <p>
+        Така практика не нова – за останні роки у розвинених країнах вона набула
+        широкого поширення під назвою equity crowdfunding. Ми лише пристосовуємо
+        цей механізм до наших умов та особливостей регулювання української
+        енергетики.
+      </p>
+      <p>
+        Краудфандингова кампанія триватиме з 15 серпня по 2019 року. При цьому
+        перші 2 тижні виключне право інвестувати в «Сонячне Місто» матимуть
+        мешканці Славутича, адже ми хочемо залучити у невеликі генеруючі
+        потужності перш за все людей, що живуть поряд з місцем, де вони
+        розташовані. 29 серпня до процесу можуть приєднатися усі охочі з
+        будь-якого регіону України.
+      </p>
+    </div>
+  </body>
 </html>

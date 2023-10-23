@@ -229,11 +229,6 @@
             cursor: pointer;
         }
 
-
-
-
-
-
         .circle-label {
             text-align: center;
             margin-top: 20px;
@@ -263,7 +258,7 @@
                 font-size: 2em;
             }
         }
-      }
+  
 
       .carousel-fade .carousel-inner .item {
         transition-property: opacity;
@@ -293,7 +288,7 @@
         background-color: darkslategrey;
         background-size: cover;
         background-position: center;
-        min-height: 480px;
+        min-height: 580px;
         padding: 50px 0;
       }
     </style>
@@ -312,20 +307,22 @@
 
 <body style="background-color: rgba(255, 255, 255, 0.323);">
     <div class="navbar">
-        <img src="../static/images/logo_color.jpg" alt="Лого" class="logo" width="70" height="70">
-        <a href="animations.html" class="larger-text">Енергетичні кооперативи</a>
-        <a href="news.html" class="news" style="font-size: 19px;">Новини</a>
+      <a href="/"><img src="../static/images/logo_color.jpg" alt="Лого" class="logo" width="70" height="70"></a>
+        
+        <a href="animations" class="larger-text">Енергетичні кооперативи</a>
+        <a href="news" class="news" style="font-size: 19px;">Новини</a>
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn" style="font-size: 19px;">Інформація</button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="baza.html">Законодавча база</a>
-                <a href="cooperatives.html">Створені кооперативи</a>
-                <a href="mentors.html">Ментори проєкту</a>
-                <a href="courses.html">Курси для навчання</a>
+                <a href="baza">Законодавча база</a>
+                <a href="cooperatives">Створені кооперативи</a>
+                <a href="mentors">Ментори проєкту</a>
+                <a href="courses">Курси для навчання</a>
 
             </div>
         </div>
-        <a href="#home" class="larger-text">Зареєструватись/Вхід</a>
+        <a href="login" class="larger-text">Логін</a>
+        <a href="signup" class="larger-text">Реєстрація</a>
     </div>
     <div class="container">
         <div class="row">
@@ -342,7 +339,7 @@
                         <div class="carousel-caption">
                             <div class="hero fadeInUp animated">
                                 <hgroup>
-                                    <a href="animations.html" class="btn">Дізнатись більше</a>
+                                    <a href="animations" class="btn">Дізнатись більше</a>
                                 </hgroup>
                             </div>
                         </div>
@@ -384,13 +381,6 @@
                 background-image: url(https://images.pexels.com/photos/7555343/pexels-photo-7555343.jpeg);
               "
             >
-              <div class="carousel-caption">
-                <div class="hero fadeInUp animated">
-                  <hgroup>
-                    <h1>Енергетичні кооперативи</h1>
-                  </hgroup>
-                </div>
-              </div>
             </div>
             <div
               class="item"
@@ -398,13 +388,6 @@
                 background-image: url(https://images.pexels.com/photos/5683351/pexels-photo-5683351.jpeg);
               "
             >
-              <div class="carousel-caption">
-                <div class="hero fadeInUp animated">
-                  <hgroup>
-                    <h1>Енергетичні кооперативи</h1>
-                  </hgroup>
-                </div>
-              </div>
             </div>
           </div>
           <a
@@ -479,15 +462,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
     <footer style="background-color: #396e3c; color: white; padding: 20px; text-align: center; margin-top: 20px;">
         <div class="container">
             <div class="row">

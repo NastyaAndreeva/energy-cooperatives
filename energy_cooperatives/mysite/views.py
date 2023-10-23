@@ -21,6 +21,9 @@ def signup_form(request):
         form = SignupForm()
     return render(request, 'signup_form.html', {'form': form})
 
+def index(request):
+    return render(request, 'index.html')
+
 def baza_view(request):
     return render(request, 'baza.html')
 
@@ -31,7 +34,7 @@ def courses_view(request):
     return render(request, 'courses.html')
 
 def mentors_view(request):
-    return render(request, 'mentors.html')
+    return render(request, 'masha_mentors.html')
 
 def news_view(request):
     return render(request, 'news.html')
