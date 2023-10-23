@@ -2,41 +2,117 @@
 <html>
   <head>
     <title>Login Form</title>
-    <!-- Include Bootstrap CSS -->
+    <!-- Add Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <!-- Add Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <style>
+      /* Add custom CSS here if needed */
+    </style>
   </head>
   <body>
     <div class="container">
-      <h2>Login Form</h2>
-      <form>
-        <div class="form-group">
-          <label for="email">Email address:</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="Enter your email"
-          />
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">Login</div>
+            <div class="card-body">
+              <form method="post">
+                {% csrf_token %}
+
+                <!-- Username -->
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="fas fa-user"></i
+                      ></span>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="username"
+                      name="username"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="fas fa-envelope"></i
+                      ></span>
+                    </div>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Password1 -->
+                <div class="form-group">
+                  <label for="password1">Password</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="fas fa-lock"></i
+                      ></span>
+                    </div>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password1"
+                      name="password1"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Password2 -->
+                <div class="form-group">
+                  <label for="password2">Confirm Password</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="fas fa-lock"></i
+                      ></span>
+                    </div>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password2"
+                      name="password2"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Login</button>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="password">Password:</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            placeholder="Enter your password"
-          />
-        </div>
-        <button type="submit" class="btn btn-success">Log In</button>
-      </form>
+      </div>
     </div>
 
-    <!-- Include Bootstrap JS and jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Add Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
